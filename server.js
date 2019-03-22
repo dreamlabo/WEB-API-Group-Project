@@ -8,7 +8,7 @@ const app = express();
 passport.use(new GoogleStrategy()); // Creates a new instance of the Google passport stategy
                                     // passport.use => I want to use GoogleStrategy
 
-//663858297510-adv1b2rsfqjse556thsslgb9qr2os0rr.apps.googleusercontent.com
+
 
 const PORT = process.env.PORT || 5000;  // defines the port as either the port given to us by Heroku
                                         // Or it's port 5000 on out local machine
