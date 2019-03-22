@@ -3,8 +3,7 @@ const passport = require('passport');  // how to handle authentication
 const GoogleStrategy = require('passport-google-oauth20').Strategy; // which auth stategy to use
 
 const app = express();
-// Client ID  663858297510-adv1b2rsfqjse556thsslgb9qr2os0rr.apps.googleusercontent.com
-// "client_secret":  ifYPMOhteI6EFx49h61ievSX
+
 
 passport.use(new GoogleStrategy()); // Creates a new instance of the Google passport stategy
                                     // passport.use => I want to use GoogleStrategy
