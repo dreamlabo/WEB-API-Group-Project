@@ -1,6 +1,6 @@
 const express = require('express');
 require('./services/passport');
-require('./routes/authRoutes');
+//require('./routes/authRoutes');
 
 
 const app = express();
