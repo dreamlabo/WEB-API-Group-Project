@@ -1,6 +1,6 @@
 const passport = require('passport');  // how to handle authentication
 const GoogleStrategy = require('passport-google-oauth20').Strategy; // which auth stategy to use
-//const keys = require('../Config/Keys.js');
+const keys = require('../Config/Keys.js');
 
 
 
