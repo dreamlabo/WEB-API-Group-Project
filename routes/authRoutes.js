@@ -9,4 +9,15 @@ module.exports = (app) => {
            // scope: gives us access to username and passport
 
     app.get('/auth/google/callback', passport.authenticate('google'));
+
+    app.get('/api/logout', (req,res) =>{
+        req.logout();    // kills the cookie the user was using
+        res.send(req.user);
+
+    });
+
+
+    app.get('/api/current_user', (req, res) =>{
+        res.send(req.user);
+    })
 };
