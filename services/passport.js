@@ -27,7 +27,7 @@ passport.use(new GoogleStrategy(                 // Creates a new instance of th
         clientID: keys.googleClientID,           // passport.use => I want to use GoogleStrategy
         clientSecret: keys.googleClientSecret,   // Arguments needed to get permission from google
         callbackURL: '/auth/google/callback',     // route the user is sent to after google grants permission
-        proxy: true
+        proxy: true //
     },
 
     (accessToken, refreshToken, profile, done) => {
