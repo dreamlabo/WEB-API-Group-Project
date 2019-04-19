@@ -6,7 +6,7 @@ const keys = require('../Config/Keys.js');
 mongoose.Promise = global.Promise;
 
 const User = mongoose.model('users');  // One argument means we're trying to fetch something out of mongoose
-
+///////
 
 // Create a "cookie" for the user that was just created below (e.g. the "existingUser")
 passport.serializeUser((user, done )=> {
