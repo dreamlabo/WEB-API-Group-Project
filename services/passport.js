@@ -3,6 +3,8 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy; // which aut
 const mongoose  = require('mongoose');
 const keys = require('../Config/Keys.js');
 
+///////
+
 mongoose.Promise = global.Promise;
 
 const User = mongoose.model('users');  // One argument means we're trying to fetch something out of mongoose
