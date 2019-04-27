@@ -1,9 +1,10 @@
 const passport = require('passport');  // how to handle authentication
 const GoogleStrategy = require('passport-google-oauth20').Strategy; // which auth strategy to use
 const mongoose  = require('mongoose');
+//const User = mongoose.model('users');
 const keys = require('../Config/Keys.js');
 
-///////
+
 
 mongoose.Promise = global.Promise;
 
