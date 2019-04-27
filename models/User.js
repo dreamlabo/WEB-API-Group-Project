@@ -20,3 +20,4 @@ const userSchema = new Schema({
 
 // Loads a schema into mongoose (two arguments means we're trying to load something into mongoose
 mongoose.model('users', userSchema); // we want to create a collection called users (If it doesnt already exist)
+/////
