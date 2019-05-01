@@ -8,11 +8,17 @@ module.exports = (app) => {
            // 'google' > assigns the string 'google' to the strategy we are using in passport.use seen above
            // scope: gives us access to username and passport
 
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get(
+        '/auth/google/callback',
+        passport.authenticate('google'),
+        (req, res) => {
+            res.redirect('/surveys');
+        }
+    );
 
     app.get('/api/logout', (req,res) =>{
         req.logout();    // kills the cookie the user was using
-        res.send(req.user);
+        res.redirect('/');
 
     });
 

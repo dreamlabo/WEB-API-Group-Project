@@ -33,29 +33,26 @@ passport.use(new GoogleStrategy(                 // Creates a new instance of th
         proxy: true //
     },
 
-    (accessToken, refreshToken, profile, done) => {
-        User.findOne({googleId: profile.id})     //  check if the user exists
-            .then((existingUser) => {      // If it does, cool
-                if (existingUser){
-                    console.log("User exists"); // for production only
-                    done(null, existingUser);   // 1st argument is an error argument, 2nd argument is the user record
+    async (accessToken, refreshToken, profile, done) => {
+        const existingUser = await User.findOne({googleId: profile.id})     //  check if the user exists
+                                                                            // If it does, cool
+        if (existingUser){
+            console.log("User exists"); // for production only
+            done(null, existingUser);   // 1st argument is an error argument, 2nd argument is the user record
 
-                }else{   // If it doesnt exist, add it to the database
+        }else{   // If it doesnt exist, add it to the database
+                 // How user profile save() is implemented in the video
+                 //new User({googleId: profile.id}).save(); // must call the function "save()" to actually save to the database.
 
-                    // How user profile save() is implemented in the video
-                    //new User({googleId: profile.id}).save(); // must call the function "save()" to actually save to the database.
-
-                    // how we saved the user in our class examples
-                    var userNew = new User();
-                    userNew.googleId = profile.id;
-                    userNew.firstName = profile.name.givenName;
-                    userNew.lastName = profile.name.familyName;
-                    userNew.email = profile.emails[0].value;
-                    userNew.save()
-                        .then(user => done(null, user));
-                }
-            });
-
+            // how we saved the user in our class examples
+            var userNew = new User();
+            userNew.googleId = profile.id;
+            userNew.firstName = profile.name.givenName;
+            userNew.lastName = profile.name.familyName;
+            userNew.email = profile.emails[0].value;
+            const user = await userNew.save()
+                done(null, user);
+        }
 
         console.log('access token', accessToken);   // for development only
         console.log('refresh token', refreshToken); // for development only
