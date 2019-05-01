@@ -1,4 +1,4 @@
-const keys = require('../config/Keys');
+const keys = require('../Config/Keys');
 const stripe = require('stripe')(keys.stripeSecretKey);
 const requireLogin = require('../middlewares/requireLogin');
 
