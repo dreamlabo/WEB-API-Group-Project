@@ -40,7 +40,7 @@ class Header extends Component{
                         to={this.props.auth ? '/surveys' : '/'}  // ? == ternary operator (1st arg if true : 2nd arg if false)
                         className="left brand-logo"
                     >
-                        Emaily
+                        Email Resources
                     </Link>
                     <ul className="right">
                          {this.renderContent()}
