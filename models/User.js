@@ -12,6 +12,7 @@ mongoose.set('useCreateIndex', true);
 
 const userSchema = new Schema({
     googleId: String,
+    credits: {type: Number, default: 0},
     firstName: String,
     lastName: String,
     email: String
