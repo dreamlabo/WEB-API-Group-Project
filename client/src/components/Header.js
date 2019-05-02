@@ -35,7 +35,7 @@ class Header extends Component{
     render() {
         return (
             <nav>
-                <div className="nav-wrapper">
+                <div className="nav-wrapper red darken-2">
                     <Link
                         to={this.props.auth ? '/surveys' : '/'}  // ? == ternary operator (1st arg if true : 2nd arg if false)
                         className="left brand-logo"

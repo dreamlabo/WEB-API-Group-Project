@@ -5,6 +5,7 @@ const passport = require('passport');   // make passport make use of cookies
 const bodyParser = require('body-parser');
 const keys = require('./Config/Keys');
 require('./models/User');     // order of your require statements matter
+require('./models/Survey');
 require('./services/passport');
 
 
@@ -28,6 +29,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 // run in production (at Heroku)
 if (process.env.NODE_ENV === 'production'){
