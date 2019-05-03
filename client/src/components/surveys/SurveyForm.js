@@ -1,51 +1,58 @@
 // SurveyForm shows a form for a user to add input
+import _ from 'lodash';
 import React, { Component } from 'react';
 import {reduxForm, Field} from 'redux-form';
+import { Link } from 'react-router-dom';
 import SurveyField from './SurveyField';
+import validateEmails from '../../utils/validateEmails'
+import formFields from './formFields';
+
 
 
 class SurveyForm extends Component{
     renderFields() {
-        return (
-            <div>
-                <Field label="Survey Title"
-                       type="text"
-                       name="title"
-                       component={SurveyField}
-                />
-                <Field label="Subject Line"
-                       type="text"
-                       name="subject"
-                       component={SurveyField}
-                />
-                <Field label="Email Body"
-                       type="text"
-                       name="body"
-                       component={SurveyField}
-                />
-                <Field label="Recipient List"
-                       type="text"
-                       name="emails"
-                       component={SurveyField}
-                />
-            </div>
-        );
-}
+        return _.map(formFields, ({label, name})=> {
+            return (
+                <Field key={name} component={SurveyField} type="text" label={label} name={name}/>
+            );
+        });
+    }
 
     render(){
         return (
             <div>
                 <form
-                    onSubmit={this.props.handleSubmit(values => console.log(values))}>
+                    onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                     {this.renderFields()}
-                    <button type="submit">Submit</button>
+                    <Link to="/surveys" className="red darken-2 btn-flat white-text">
+                        Cancel
+                    </Link>
+                    <button type="submit" className="teal btn-flat right white-text">
+                        Next
+                        <i className="material-icons right">arrow_forward</i>
+                    </button>
                 </form>
-
             </div>
         );
     }
 }
 
+function validate(values){
+    const errors = {};
+
+    _.each(formFields, ({name, noValueErrorMsg}) => {
+        if(!values[name]){
+            errors[name] = noValueErrorMsg;
+        }
+    });
+
+    errors.recipients = validateEmails(values.recipients || '');
+
+    return errors;
+
+}
 export default reduxForm({
-    form: 'surveyForm'
+    validate: validate,
+    form: 'surveyForm',        // how to correctly track the form values
+    destroyOnUnmount: false
 }) (SurveyForm);
