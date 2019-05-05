@@ -22,11 +22,11 @@ export const submitSurvey = (values, history) => async dispatch => {
 
 };
 
-//export const fetchSurveys = () => async dispatch =>{
-    //const res = await axios.get('/api/surveys');
+export const fetchSurveys = () => async dispatch =>{
+    const res = await axios.get('/api/surveys');
 
-   // dispatch({ type: FETCH_SURVEYS, payload: res.data});
-//};
+    dispatch({ type: FETCH_SURVEYS, payload: res.data});
+};
 
 //export const fetchCharity = () => async dispatch =>{
   //  const res = await axios.get('/api/returnCharity');
