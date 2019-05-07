@@ -1,45 +1,92 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchSurveys } from '../../actions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchSurveys } from "../../actions";
+import "../css/SurveyList.css";
+import '../css/SurveyList.css';
 
 class SurveyList extends Component {
-    componentDidMount() {
-        this.props.fetchSurveys();
-    }
+  componentDidMount() {
+    this.props.fetchSurveys();
+  }
 
-    renderSurveys() {
-        return this.props.surveys.reverse().map(survey => {
-            return (
-                <div className="card darken-1" key={survey._id}>
-                    <div className="card-content">
-                        <span className="card-title">{survey.title}</span>
-                        <p>
-                            {survey.body}
-                        </p>
-                        <p className="right">
-                            Sent On: {new Date(survey.dateSent).toLocaleDateString()}
-                        </p>
-                    </div>
-                    <div className="card-action">
-                        <a>Yes: {survey.yes}</a>
-                        <a>No: {survey.no}</a>
-                    </div>
-                </div>
-            );
-        });
-    }
-
-    render() {
-        return (
-            <div>
-                {this.renderSurveys()}
+  renderSurveys() {
+    return this.props.surveys.reverse().map(survey => {
+      return (
+        <div className="card" key={survey._id}>
+            <div class="card-header">
+            <p className="card-text blue-text">Sent On: {new Date(survey.dateSent).toLocaleDateString()}</p>
             </div>
-        );
-    }
+          <div className="card-body">
+            <h3 className="card-title">{survey.title}</h3>
+            <p className="card-text">{survey.body}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span className="yes-no">Yes:</span>  {survey.yes}</li>
+            <li class="list-group-item"><span className="yes-no">No:</span>  {survey.no}</li>
+          </ul>
+        </div>
+
+      );
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderSurveys()}
+
+        <div className="card">
+            <div class="card-header">
+            <p className="card-text blue-text">Sent On: 05/05/19</p>
+            </div>
+          <div className="card-body">
+            <h3 className="card-title">Survey Title</h3>
+            <p className="card-text">body body body</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span className="yes-no">Yes:</span>  1</li>
+            <li class="list-group-item"><span className="yes-no">No:</span>  0</li>
+          </ul>
+        </div>
+
+        <div className="card">
+            <div class="card-header">
+            <p className="card-text blue-text">Sent On: 05/05/19</p>
+            </div>
+          <div className="card-body">
+            <h3 className="card-title">Survey Title</h3>
+            <p className="card-text">body body body</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span className="yes-no">Yes:</span>  1</li>
+            <li class="list-group-item"><span className="yes-no">No:</span>  0</li>
+          </ul>
+        </div>
+
+        <div className="card">
+            <div class="card-header">
+            <p className="card-text blue-text">Sent On: 05/05/19</p>
+            </div>
+          <div className="card-body">
+            <h3 className="card-title">Survey Title</h3>
+            <p className="card-text">body body body</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span className="yes-no">Yes:</span>  1</li>
+            <li class="list-group-item"><span className="yes-no">No:</span>  0</li>
+          </ul>
+        </div>
+
+      </div>
+    );
+  }
 }
 
 function mapStateToProps({ surveys }) {
-    return { surveys };
+  return { surveys };
 }
 
-export default connect(mapStateToProps, { fetchSurveys })(SurveyList);
+export default connect(
+  mapStateToProps,
+  { fetchSurveys }
+)(SurveyList);

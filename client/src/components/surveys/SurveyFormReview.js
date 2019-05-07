@@ -6,15 +6,17 @@ import formFields from './formFields';
 import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 //import {submitSurvey} from "../../actions";
+import '../css/SurveyFormReview.css';
 
 
 
 const SurveyFormReview = ({onCancel, formValues, submitSurvey, history}) => {
+
     const reviewFields = _.map(formFields, ({name, label}) => {
         return(
             <div key={name}>
-                <label>{label}</label>
-                <div>
+                <label className="label">{label}</label>
+                <div className="review-text">
                     {formValues[name]}
                 </div>
             </div>
@@ -24,19 +26,18 @@ const SurveyFormReview = ({onCancel, formValues, submitSurvey, history}) => {
     });
 
     return (
-        <div>
-            <h5>Please confirm your entries</h5>
+        <div className="survey-form-box bg-light">
+            <p className="confirm-text">Please confirm your entries</p>
             {reviewFields}
             <button
-            className="yellow darken-3 white-text btn-flat" onClick={onCancel}>
+            className="btn btn-warning btn-lg back-btn" onClick={onCancel}>
                 Back
             </button>
             <button
                 onClick={() => submitSurvey(formValues, history)}
-                className="green white-text btn-flat right"
+                className="btn btn-primary btn-lg submit-btn"
             >
-                 Send Survey
-                <i className="material-icons right">email</i>
+                 Send Survey >
             </button>
         </div>
     );

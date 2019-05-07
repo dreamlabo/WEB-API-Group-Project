@@ -2,15 +2,16 @@
 // label and text input
 
 import React from 'react';
+import '../css/SurveyField.css';
 
 export default ({ input, label, meta: {error, touched} }) => {
     return (
-        <div>
-            <label>{label}</label>
-            <input {...input} style={{marginBottom: '5px'}}/>
-            <div className="red-text" style={{marginBottom: '20px'}}>
+        <div className="form-group">
+            <label className="label">{label}</label>
+            <input className="form-control" {...input}/>
+            <small className="red-text">
                  {touched && error}
-            </div>
+            </small>
         </div>
     );
 };

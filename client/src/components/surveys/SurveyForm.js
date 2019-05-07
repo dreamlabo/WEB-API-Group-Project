@@ -1,58 +1,62 @@
 // SurveyForm shows a form for a user to add input
-import _ from 'lodash';
-import React, { Component } from 'react';
-import {reduxForm, Field} from 'redux-form';
-import { Link } from 'react-router-dom';
-import SurveyField from './SurveyField';
-import validateEmails from '../../utils/validateEmails'
-import formFields from './formFields';
+import _ from "lodash";
+import React, { Component } from "react";
+import { reduxForm, Field } from "redux-form";
+import { Link } from "react-router-dom";
+import SurveyField from "./SurveyField";
+import validateEmails from "../../utils/validateEmails";
+import formFields from "./formFields";
+import "../css/SurveyForm.css";
 
+class SurveyForm extends Component {
+  renderFields() {
+    return _.map(formFields, ({ label, name }) => {
+      return (
+        <Field
+          key={name}
+          component={SurveyField}
+          type="text"
+          label={label}
+          name={name}
+        />
+      );
+    });
+  }
 
+  render() {
+    return (
+      <div className="survey-form-box bg-light">
+        <p className="confirm-text">Enter new survey details</p>
+        <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
+          {this.renderFields()}
 
-class SurveyForm extends Component{
-    renderFields() {
-        return _.map(formFields, ({label, name})=> {
-            return (
-                <Field key={name} component={SurveyField} type="text" label={label} name={name}/>
-            );
-        });
-    }
-
-    render(){
-        return (
-            <div>
-                <form
-                    onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
-                    {this.renderFields()}
-                    <Link to="/surveys" className="red darken-2 btn-flat white-text">
-                        Cancel
-                    </Link>
-                    <button type="submit" className="teal btn-flat right white-text">
-                        Next
-                        <i className="material-icons right">arrow_forward</i>
-                    </button>
-                </form>
-            </div>
-        );
-    }
+              <Link to="/surveys" className="cancel-btn text-left">
+                <button className="btn btn-danger btn-lg">Cancel</button>
+              </Link>
+              <button type="submit" className="btn btn-primary btn-lg next-btn">
+                Next >
+              </button>
+        </form>
+      </div>
+    );
+  }
 }
 
-function validate(values){
-    const errors = {};
+function validate(values) {
+  const errors = {};
 
-    _.each(formFields, ({name, noValueErrorMsg}) => {
-        if(!values[name]){
-            errors[name] = noValueErrorMsg;
-        }
-    });
+  _.each(formFields, ({ name, noValueErrorMsg }) => {
+    if (!values[name]) {
+      errors[name] = noValueErrorMsg;
+    }
+  });
 
-    errors.recipients = validateEmails(values.recipients || '');
+  errors.recipients = validateEmails(values.recipients || "");
 
-    return errors;
-
+  return errors;
 }
 export default reduxForm({
-    validate: validate,
-    form: 'surveyForm',        // how to correctly track the form values
-    destroyOnUnmount: false
-}) (SurveyForm);
+  validate: validate,
+  form: "surveyForm", // how to correctly track the form values
+  destroyOnUnmount: false
+})(SurveyForm);
