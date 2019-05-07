@@ -3,30 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a94f94df-ccd0-4012-9a34-3b251d654381" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Payments.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Payments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/surveys/SurveyField.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/surveys/SurveyField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/surveys/SurveyForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/surveys/SurveyForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/surveys/SurveyFormReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/surveys/SurveyFormReview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/surveys/SurveyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/surveys/SurveyList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/surveys/SurveyNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/surveys/SurveyNew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/surveys/formFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/surveys/formFields.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/surveysReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/surveysReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/validateEmails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/validateEmails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/surveyRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/surveyRoutes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="351">
               <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -90,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/Landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
+            <state relative-caret-position="341">
               <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
             </state>
           </provider>
@@ -105,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/components/surveys/SurveyList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-770">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="189">
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -120,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/Dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <state relative-caret-position="308">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -200,7 +177,6 @@
         <option value="$PROJECT_DIR$/client/src/reducers/charityReducer.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/surveysReducer.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/client/src/components/surveys/SurveyList.js" />
         <option value="$PROJECT_DIR$/client/src/actions/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/Dashboard.js" />
         <option value="$PROJECT_DIR$/client/src/components/Header.js" />
@@ -208,6 +184,7 @@
         <option value="$PROJECT_DIR$/client/src/components/Landing.js" />
         <option value="$PROJECT_DIR$/routes/surveyRoutes.js" />
         <option value="$PROJECT_DIR$/client/src/components/App.js" />
+        <option value="$PROJECT_DIR$/client/src/components/surveys/SurveyList.js" />
       </list>
     </option>
   </component>
@@ -392,7 +369,7 @@
       <workItem from="1556645324358" duration="121854000" />
       <workItem from="1557013200787" duration="1197000" />
       <workItem from="1557024040159" duration="5148000" />
-      <workItem from="1557178871213" duration="10353000" />
+      <workItem from="1557178871213" duration="10952000" />
     </task>
     <task id="LOCAL-00001" summary="checking connection to  git">
       <created>1556295666900</created>
@@ -569,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557027463630</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added front end from Prinn">
+      <created>1557250453473</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1557250453473</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177290000" />
+    <option name="totallyTimeSpent" value="177889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,9 +570,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" side_tool="true" visible="true" weight="0.24372523" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" side_tool="true" visible="true" weight="0.24372523" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -599,7 +584,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993395" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.43847242" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4980185" visible="true" weight="0.21923621" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4980185" visible="true" weight="0.042432815" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.39035666" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3281471" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -684,7 +669,8 @@
     <MESSAGE value="reverting2" />
     <MESSAGE value="stashing changes before a &quot;checkout&quot;" />
     <MESSAGE value="fixed email &quot;problem&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed email &quot;problem&quot;" />
+    <MESSAGE value="Added front end from Prinn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added front end from Prinn" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client/src/serviceWorker.js">
@@ -951,16 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/surveys/SurveyList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Payments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -975,16 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,13 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/surveyRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1024,11 +983,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="351">
           <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#149#187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/surveys/SurveyList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

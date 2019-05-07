@@ -34,49 +34,6 @@ class SurveyList extends Component {
     return (
       <div>
         {this.renderSurveys()}
-
-        <div className="card">
-            <div class="card-header">
-            <p className="card-text blue-text">Sent On: 05/05/19</p>
-            </div>
-          <div className="card-body">
-            <h3 className="card-title">Survey Title</h3>
-            <p className="card-text">body body body</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span className="yes-no">Yes:</span>  1</li>
-            <li class="list-group-item"><span className="yes-no">No:</span>  0</li>
-          </ul>
-        </div>
-
-        <div className="card">
-            <div class="card-header">
-            <p className="card-text blue-text">Sent On: 05/05/19</p>
-            </div>
-          <div className="card-body">
-            <h3 className="card-title">Survey Title</h3>
-            <p className="card-text">body body body</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span className="yes-no">Yes:</span>  1</li>
-            <li class="list-group-item"><span className="yes-no">No:</span>  0</li>
-          </ul>
-        </div>
-
-        <div className="card">
-            <div class="card-header">
-            <p className="card-text blue-text">Sent On: 05/05/19</p>
-            </div>
-          <div className="card-body">
-            <h3 className="card-title">Survey Title</h3>
-            <p className="card-text">body body body</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span className="yes-no">Yes:</span>  1</li>
-            <li class="list-group-item"><span className="yes-no">No:</span>  0</li>
-          </ul>
-        </div>
-
       </div>
     );
   }
