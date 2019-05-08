@@ -4,8 +4,6 @@ const mongoose  = require('mongoose');
 //const User = mongoose.model('users');
 const keys = require('../Config/Keys.js');
 
-
-
 mongoose.Promise = global.Promise;
 
 const User = mongoose.model('users');  // One argument means we're trying to fetch something out of mongoose

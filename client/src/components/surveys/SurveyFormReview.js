@@ -20,8 +20,6 @@ const SurveyFormReview = ({onCancel, formValues, submitSurvey, history}) => {
                     {formValues[name]}
                 </div>
             </div>
-
-
         );
     });
 

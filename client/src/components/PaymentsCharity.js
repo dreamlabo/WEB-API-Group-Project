@@ -10,10 +10,10 @@ class PaymentsCharity extends Component{
                 name="OnSurvey"
                 description="$6.00 for 5 email credits + $1.00 donation"
                 amount={600}
-                token={token => this.props.handleToken(token)}
+                token={token => this.props.handleCharity(token)}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >
-                <button className="btn btn-lg btn-primary">
+                <button className="btn btn-lg btn-primary btn-block">
                     Add 5 Credits + $1 Donation
                 </button>
             </StripeCheckout>

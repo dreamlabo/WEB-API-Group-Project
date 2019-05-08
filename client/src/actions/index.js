@@ -9,6 +9,7 @@ export const fetchUser = ()  =>  async dispatch => {    // can use because we ha
     };
 
 
+// Handles the stripe payment when no charity included
 export const handleToken = (token) => async dispatch => {
     const res = await axios.post('/api/stripe', token);
 
@@ -28,6 +29,11 @@ export const fetchSurveys = () => async dispatch =>{
     dispatch({ type: FETCH_SURVEYS, payload: res.data});
 };
 
+export const handleCharity = (token) => async dispatch => {
+    const res = await axios.post('/api/stripe/charity', token);
+
+    dispatch({ type: FETCH_USER, payload: res.data });
+};
 //export const fetchCharity = () => async dispatch =>{
   //  const res = await axios.get('/api/returnCharity');
 

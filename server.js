@@ -17,6 +17,7 @@ const app = express();
 
 
 app.use(bodyParser.json());
+
 app.use(
     cookieSession({
         maxAge: 30 * 24 * 60 * 60 * 1000,       // how long the cookie will last in the browser( in milliseconds)
@@ -29,7 +30,9 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/charityRoute')(app);
 require('./routes/surveyRoutes')(app);
+
 
 // run in production (at Heroku)
 if (process.env.NODE_ENV === 'production'){

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Payments from "./Payments";
+import PaymentsCharity from "./PaymentsCharity";
+
 import './css/Header.css';
 import logo from "./logo2.png";
 
