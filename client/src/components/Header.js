@@ -23,7 +23,7 @@ class Header extends Component {
         // the user is logged in
         return [
           <li className="nav-item" key="1">
-            <Payments />
+            <a className="btn btn-primary" href="/surveys/payment" role="button">Add Credits</a>
           </li>,
           <li className="nav-item" key="3" style={{ margin: "0 10px" }}>
             <a className="btn btn-light disabled" tabIndex="-1" role="button" aria-disabled="true">Credits: {this.props.auth.credits}</a>

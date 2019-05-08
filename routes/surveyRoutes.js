@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const Path = require('path-parser').default;  // have to now use .default to use this
-const url = require('url');
+const {URL}= require('url');
 const mongoose = require('mongoose');
 const requireLogin = require('../middlewares/requireLogin');
 const requireCredits = require('../middlewares/requireCredits');
@@ -20,7 +20,6 @@ module.exports = app => {
     });
 
 
-
     // charity route
     // req.user is the current user
     //app.get('/api/returnCharity', requireLogin, async (req, res)=> {
@@ -30,39 +29,47 @@ module.exports = app => {
 
 
     app.get('/api/surveys/:surveyId/:choice', (req, res) => {
+        //console.log(res.choice)
         res.send('Thanks for voting!');
     });
 
+
     app.post('/api/surveys/webhooks', (req, res) => {
+
+        console.log(req.body);
         const p = new Path('/api/surveys/:surveyId/:choice');
 
         _.chain(req.body)
-            .map(({email, url }) => {
+            .map(({ email, url }) => {
                 const match = p.test(new URL(url).pathname);
-                if(match){
-                    return {email, surveyId: match.surveyId, choice: match.choice }
+                if (match) {
+                    return { email, surveyId: match.surveyId, choice: match.choice };
                 }
             })
-            .compact() // returns only event object
-            .uniqBy('email', 'surveyId') // keeps two votes on same email from being recorded more than once
-
-            .each(({ surveyId, email, choice}) => {
-                Survey.updateOne({
-                    _id: surveyId,
-                    recipients: {
-                        $elemMatch: {email: email, responded: false}
+            .compact()
+            .uniqBy('email', 'surveyId')
+            .each(({ surveyId, email, choice }) => {
+                console.log(surveyId);
+                console.log(email);
+                console.log(choice);
+                Survey.updateOne(
+                    {
+                        _id: surveyId,
+                        recipients: {
+                            $elemMatch: { email: email, responded: false }
+                        }
+                    },
+                    {
+                        $inc: { [choice]: 1 },
+                        $set: { 'recipients.$.responded': true },
+                        lastResponded: new Date()
                     }
-                },{
-                    $inc: { [choice]: 1},
-                    $set: {'recipients.$.responded': true},
-                    lastResponded: new Date()
-                }).exec();
+                ).exec();
             })
             .value();
 
         res.send({});
     });
-
 
 
     app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
@@ -88,7 +95,7 @@ module.exports = app => {
 
             res.send(user);
         }catch (err){
-            res.status()
+            res.status(422).send(err)
         }
     });
 };

@@ -15,7 +15,8 @@ const userSchema = new Schema({
     credits: {type: Number, default: 0},
     firstName: String,
     lastName: String,
-    email: String
+    email: String,
+    charity: {type: Number, default: 0}
 
 });
 
