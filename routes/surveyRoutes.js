@@ -54,7 +54,7 @@ module.exports = app => {
                 console.log(choice);
                 Survey.updateOne(
                     {
-                        _id: surveyId,
+                        _id: ObjectId(surveyId),
                         recipients: {
                             $elemMatch: { email: email, responded: false }
                         }
@@ -79,7 +79,7 @@ module.exports = app => {
             title: title,
             subject: subject,
             body: body,
-            recipients: recipients.split(',').map(email => ({ email })),
+            recipients: recipients.split(',').map(email => (email.trim())),  //({ email })
             _user: req.user.id,
             dateSent: Date.now()  // records when we have created(and most likely) sent the survey
         });

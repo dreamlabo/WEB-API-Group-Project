@@ -34,6 +34,9 @@ export const handleCharity = (token) => async dispatch => {
 
     dispatch({ type: FETCH_USER, payload: res.data });
 };
+
+
+
 //export const fetchCharity = () => async dispatch =>{
   //  const res = await axios.get('/api/returnCharity');
 
